@@ -1,0 +1,9 @@
+/* Global CSS Styles */
+:root {
+  --primary-color: #1e40af;
+  --secondary-color: #3b82f6;
+}
+
+body {
+  font-family: sans-serif;
+}

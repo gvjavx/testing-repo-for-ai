@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roti Bahagia | Roti Lezat & Hangat Setiap Hari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D97706',
+                        secondary: '#F59E0B',
+                        bg: '#FFFBF3',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bg text-gray-800 font-sans antialiased">
+
+    <div id="navbar-container"></div>
+    <script type="module">
+        import { navbar, footer } from './components.js';
+        window.navbar = navbar;
+        window.footer = footer;
+        document.getElementById('navbar-container').innerHTML = navbar;
+        document.getElementById('footer-container').innerHTML = footer;
+    </script>
+
+    <!-- Hero Section -->
+    <header class="container mx-auto px-6 py-16 md:py-24 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-primary mb-6 leading-tight">Kebahagiaan dalam <br>Setiap Gigitan</h1>
+        <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto">Toko roti rumahan yang menyajikan roti segar, lembut, dan dibuat dengan bahan-bahan pilihan berkualitas setiap harinya.</p>
+        <div class="flex justify-center gap-4">
+            <a href="#produk" class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg">Lihat Produk</a>
+        </div>
+    </header>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Tentang Roti Bahagia</h2>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Kami percaya bahwa roti yang baik dimulai dari bahan-bahan yang baik. Sejak awal, komitmen kami adalah menghadirkan kehangatan dari dapur kami langsung ke meja Anda. Setiap roti di Roti Bahagia dibuat secara tradisional, tanpa bahan pengawet berlebih, untuk memastikan kesegaran dan rasa otentik yang membuat Anda terus tersenyum.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk Section -->
+    <section id="produk" class="py-20 bg-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-primary">Produk Unggulan</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Produk Card -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition">
+                    <div class="text-6xl mb-6 text-center">🥐</div>
+                    <h3 class="text-xl font-bold mb-2 text-center">Croissant Mentega</h3>
+                    <p class="text-gray-600 text-center">Renyah di luar, lembut dan bermentega di dalam.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition">
+                    <div class="text-6xl mb-6 text-center">🍞</div>
+                    <h3 class="text-xl font-bold mb-2 text-center">Roti Tawar Gandum</h3>
+                    <p class="text-gray-600 text-center">Pilihan sehat untuk sarapan keluarga yang bergizi.</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition">
+                    <div class="text-6xl mb-6 text-center">🥖</div>
+                    <h3 class="text-xl font-bold mb-2 text-center">Baguette Klasik</h3>
+                    <p class="text-gray-600 text-center">Roti Prancis otentik dengan aroma yang menggugah selera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">Hubungi Kami</h2>
+            <div class="max-w-xl mx-auto bg-bg p-8 rounded-3xl shadow-sm border border-orange-100">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Nama</label>
+                        <input type="text" class="w-full px-4 py-3 border border-orange-200 rounded-xl focus:ring-2 focus:ring-primary outline-none" placeholder="Nama Anda" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">WhatsApp</label>
+                        <input type="tel" class="w-full px-4 py-3 border border-orange-200 rounded-xl focus:ring-2 focus:ring-primary outline-none" placeholder="Nomor WhatsApp" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Pesan/Pesanan</label>
+                        <textarea rows="4" class="w-full px-4 py-3 border border-orange-200 rounded-xl focus:ring-2 focus:ring-primary outline-none" placeholder="Tulis pesan atau pesanan Anda..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-semibold hover:bg-orange-600 transition">Kirim ke WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+</body>
+</html>
